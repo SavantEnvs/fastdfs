@@ -1,0 +1,9 @@
+project: savantenvs/fastdfs
+target: fuzz_file_id
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_file_id/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_file_id
+    libfuzzer: true
+    timeout: 10
